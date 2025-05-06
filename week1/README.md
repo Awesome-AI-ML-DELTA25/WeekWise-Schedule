@@ -46,4 +46,4 @@ How to run a Jupyter Notebook:
 - Use code cells to write and run Python code.
 
 ## Introduction to AI/ML
-Refer to 'week1/why.ipynb' for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
+Refer to `week1/why.ipynb` for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
