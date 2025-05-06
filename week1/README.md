@@ -47,3 +47,9 @@ How to run a Jupyter Notebook:
 
 ## Introduction to AI/ML
 Refer to `week1/why.ipynb` for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
+
+## Branching on GitHub
+Wait for it!
+
+## Data Cleaning
+Wait for it!
