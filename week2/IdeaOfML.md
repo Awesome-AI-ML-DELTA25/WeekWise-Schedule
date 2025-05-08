@@ -4,7 +4,7 @@ This file explains the basic idea behind the objective of machine learning and w
 ## Problem Statement
 We have data given by a set of points in a space, and we want to find a function that maps these points to some output. The goal is to find a function that can generalize well to unseen data.
 
-Formally, there's a hidden function $f^*$ that takes in input features $x$ and outputs a label $y$. We're given some $x_i$ and $y_i$ pairs, and we want to find a function $\hat{f}$ that approximates $f^*$ as closely as possible. 
+Formally, there's a hidden function $\tilde{f}$ that takes in input features $x$ and outputs a label $y$. We're given some $x_i$ and $y_i$ pairs, and we want to find a function $\hat{f}$ that approximates $\tilde{f}$ as closely as possible. 
 
 What does it mean by "as closely as possible"? For this we need some measure of distance between the two functions. This function should take in two functions and return a number that represents how far apart they are, with closer functions returning smaller numbers. Such a function is denoted by $L(f, g)$, where $f$ is the true function and $g$ is the approximated function, and is called the **Loss**.
 
@@ -12,13 +12,13 @@ Now, since the true function is unknown, we can only use the data we have to app
 
 That is, now we define the distance between the approximated function and the original as follows:
 $$
-L(f^*, \hat{f}) = \frac{1}{N} \sum_{i=1}^N l(y_i, \hat{f}(x_i))
+L(\tilde{f}, \hat{f}) = \frac{1}{N} \sum_{i=1}^N l(y_i, \hat{f}(x_i))
 $$
 where $l(y_i, \hat{f}(x_i))$ is called the **Loss Function**. This function takes in the true label $y_i$ and the predicted label $\hat{f}(x_i)$ and returns a number that represents how far apart they are.
 
 Our goal is to find a function $\hat{f}$ that minimizes the loss incurred on the training data. This is called the **Empirical Risk Minimization** (ERM) principle. That is, we want:
 $$
-\hat{f} = \underset{{\hat{f} \in \text{Space of all Functions}}}{\arg \min} L(f^*, \hat{f}) = \underset{{\hat{f} \in \text{Space of all Functions}}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, \hat{f}(x_i))
+\hat{f} = \underset{{\hat{f} \in \text{Space of all Functions}}}{\arg \min} L(\tilde{f}, \hat{f}) = \underset{{\hat{f} \in \text{Space of all Functions}}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, \hat{f}(x_i))
 $$
 
 ## The Issue
@@ -48,11 +48,11 @@ where $\theta$ is a vector of parameters that define the model. In the linear ca
 
 In layman terms, the model is like a machine. The structure of the machine is fixed, but we can change the parameters of the machine to get different outputs. The goal is to find the parameters that minimize the loss function. Another way to think about it is that the model is a recipe, where the ingredients are fixed, but the brands/quality of the ingredients can be changed. The goal is to find the best mixture of ingredients that makes the best dish.
 $$
-\hat{f} = \underset{{f \in \mathcal{F}}}{\arg \min} L(f^*, f) = \underset{{f \in \mathcal{F}}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, f(x_i))
+\hat{f} = \underset{{f \in \mathcal{F}}}{\arg \min} L(\tilde{f}, f) = \underset{{f \in \mathcal{F}}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, f(x_i))
 $$
 Alternatively, we can write this as:
 $$
-\hat{\theta} = \underset{{\theta \in \mathbb{R}^d}}{\arg \min} L(f^*, f_{\theta}) = \underset{{\theta \in \mathbb{R}^d}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, f_{\theta}(x_i))
+\hat{\theta} = \underset{{\theta \in \mathbb{R}^d}}{\arg \min} L(\tilde{f}, f_{\theta}) = \underset{{\theta \in \mathbb{R}^d}}{\arg \min} \frac{1}{N} \sum_{i=1}^N l(y_i, f_{\theta}(x_i))
 $$
 and the approximated function is given by:
 $$
