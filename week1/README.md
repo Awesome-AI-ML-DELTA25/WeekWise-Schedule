@@ -49,7 +49,21 @@ How to run a Jupyter Notebook:
 Refer to `week1/why.ipynb` for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
 
 ## Branching on GitHub
-Added branching demo
+Branching is a way to create a separate line of development in your Git repository. It allows you to work on new features or bug fixes without affecting the main codebase.
+- `git branch <branch_name>`: Create a new branch.
+- `git checkout <branch_name>`: Switch to a different branch.
+- `git merge <branch_name>`: Merge changes from one branch into another.
+- `git branch -d <branch_name>`: Delete a branch.
+- `git push origin <branch_name>`: Push a branch to the remote repository.
+- `git pull origin <branch_name>`: Pull changes from a branch in the remote repository.
 
 ## Data Cleaning
-Wait for it!
+Data cleaning is the process of preparing your data for analysis by removing or correcting errors, inconsistencies, and missing values. It is an essential step in the data science workflow.
+- Use libraries like `pandas` and `numpy` to manipulate and clean your data.
+- Use functions like `info()`, `describe()`, and `head()` to understand the structure and content of your data.
+- Use functions like `dropna()`, `fillna()`, and `replace()` to handle missing values and inconsistencies, or perform imputation.
+- Use matplotlib and seaborn for data visualization to identify patterns and outliers in your data.
+
+## Take Home Project
+Refer to [this repository](https://github.com/Awesome-AI-ML-DELTA25/DataCleaning) for the take-home project. 
+
