@@ -46,7 +46,7 @@ How to run a Jupyter Notebook:
 - Use code cells to write and run Python code.
 
 ## Introduction to AI/ML
-Refer to `week1/why.ipynb` for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
+Refer to [this notebook](./why.ipynb) for a brief introduction to AI/ML. Think of more use cases of why a certain problem needs to be solved using AI/ML, rather than traditional programming.
 
 ## Branching on GitHub
 Branching is a way to create a separate line of development in your Git repository. It allows you to work on new features or bug fixes without affecting the main codebase.
@@ -63,6 +63,7 @@ Data cleaning is the process of preparing your data for analysis by removing or 
 - Use functions like `info()`, `describe()`, and `head()` to understand the structure and content of your data.
 - Use functions like `dropna()`, `fillna()`, and `replace()` to handle missing values and inconsistencies, or perform imputation.
 - Use matplotlib and seaborn for data visualization to identify patterns and outliers in your data.
+Refer to [this notebook](./data_cleaning.ipynb) for the tutorial on data cleaning.
 
 ## Take Home Project
 Refer to [this repository](https://github.com/Awesome-AI-ML-DELTA25/DataCleaning) for the take-home project. 
