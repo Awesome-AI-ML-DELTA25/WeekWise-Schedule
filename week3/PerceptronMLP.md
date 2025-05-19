@@ -14,6 +14,7 @@ SIGN(x) = \begin{cases}
 \end{cases}
 $$
 Perceptron is very good at classifying linearly separable data, like the AND and OR functions. 
+
 ![AND function](./images/AND.png)
 
 But it's hopeless against non-linearly seperable functions like XOR. What to do?
@@ -44,10 +45,12 @@ For regression tasks, we can use a linear activation function in the final layer
 
 ### Solving XOR
 A double layered MLP can solve the XOR problem. The first layer learns to separate the data into two classes, and the second layer learns to combine the outputs of the first layer to produce the final output. The MLP can learn to classify the XOR function by using a combination of the AND and OR functions.
+
 ![MLP XOR](./images/XOR.png)
+
 ![MLP XOR 2](./images/XOR2.png)
 
-### Genralization
+### Generalization
 A $k$-layer perceptron can be represented as:
 $$
 f(x) = \sigma_k(W_k \cdot \sigma_{k-1}(W_{k-1} \cdots \sigma_2(W_2 \cdot \sigma_1(W_1 x + b_1) + b_2) \cdots + b_{k-1}) + b_k)
