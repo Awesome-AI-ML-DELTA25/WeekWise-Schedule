@@ -10,8 +10,9 @@ def train(model, X_train, y_train, X_test, y_test, criterion, optimizer, epochs=
 
     for epoch in tqdm(range(epochs), desc="Training"):
         # --- Training step ---
+        model.train()
         optimizer.zero_grad()
-        outputs = model(X_train)
+        outputs = model(X_train)  # model.forward(X_train)
         loss = criterion(outputs, y_train)
         loss.backward()
         optimizer.step()
