@@ -6,12 +6,11 @@ YOLO treats object detection as a single regression problem, that is, it outputs
 
 Given an input image, YOLO divides the image into a grid. Then, sliding a fixed-size window across the grid, it predicts bounding boxes and class probabilities for each grid cell. The model uses anchor boxes to predict multiple bounding boxes per grid cell, allowing it to detect multiple objects of different sizes. That is, for every grid cell, YOLO predicts:
 $$
-tx, ty, tw, th, o, p(c_1), p(c_2), ..., p(c_n)
-
-x = sigmoid(tx) + i
-y = sigmoid(ty) + j
-w = p(w_0) * e^{tw}
-h = p(h_0) * e^{th}
+tx, ty, tw, th, o, p(c_1), p(c_2), ..., p(c_n)\\
+x = sigmoid(tx) + i\\
+y = sigmoid(ty) + j\\
+w = p(w_0) * e^{tw}\\
+h = p(h_0) * e^{th}\\
 $$
 where $i$ and $j$ are the grid cell indices, $p(c_k)$ is the probability of class $k$, and $w_0$ and $h_0$ are the dimensions of the anchor boxes.
 ![YOLO Architecture](./images/yolo.png)
